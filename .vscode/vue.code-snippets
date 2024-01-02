@@ -1,0 +1,47 @@
+{
+	"Vue component": {
+		"prefix": "v-component",
+		"body": [
+			"<script lang='ts' setup>",
+			"</script>",
+			"",
+			"<template>",
+			"<div class='${1:$TM_FILENAME_BASE}'></div>"
+			"</template>",
+			"",
+			"<style lang='scss' scoped>",
+			"</style>"
+		],
+		"description": "Vue 3 component snippet."
+	},
+	"Vue page": {
+		"prefix": "v-page",
+		"body": [
+			"<script lang='ts' setup>",
+			"import { useSeoMeta } from '@unhead/vue'",
+			"",
+			"useSeoMeta({",
+			"title: '${1:$TM_FILENAME_BASE}',",
+			"description: 'My ${1:$TM_FILENAME_BASE page}',",
+			"// keywords: '',",
+			"ogDescription: 'Still ${1:$TM_FILENAME_BASE my} ${1:$TM_FILENAME_BASE page}',",
+			"ogUrl: window.location.href,",
+			"ogTitle: '${1:$TM_FILENAME_BASE}',",
+			"// ogImage: '@CHANGE_ME',",
+			"// twitterDescription: '@CHANGE_ME',",
+			"// twitterImage: '@CHANGE_ME',",
+			"twitterTitle: 'My ${1:$TM_FILENAME_BASE page}'",
+			"// twitterCard: '@CHANGE_ME'",
+			"})",
+			"</script>",
+			"",
+			"<template>",
+			"<div><h1>${1:$TM_FILENAME_BASE}</h1></div>"
+			"</template>",
+			"",
+			"<style lang='scss' scoped>",
+			"</style>"
+		],
+		"description": "Vue 3 page component snippet."
+	}
+}
