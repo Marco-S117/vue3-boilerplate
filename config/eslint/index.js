@@ -8,4 +8,8 @@ module.exports = antfu({
   },
   typescript: true,
   vue: true,
+  formatters: {
+    css: true,
+    markdown: true,
+  },
 })

@@ -25,6 +25,7 @@
     "@unocss/preset-web-fonts": "^0.57.7",
     "@vitejs/plugin-vue": "^4.6.2",
     "eslint": "^8.56.0",
+    "eslint-plugin-format": "^0.1.0",
     "npm": "^10.2.5",
     "sass": "^1.69.6",
     "unocss": "^0.57.7",
