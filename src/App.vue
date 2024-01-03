@@ -61,8 +61,5 @@ html {
   ::selection {
     @apply bg-yellow-400 text-primary;
   }
-
-  background-color: red;
-  color: #000;
 }
 </style>

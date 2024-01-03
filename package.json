@@ -25,7 +25,6 @@
     "@unocss/preset-icons": "^0.57.7",
     "@unocss/preset-web-fonts": "^0.57.7",
     "@vitejs/plugin-vue": "^4.6.2",
-    "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.19.2",
     "npm": "^10.2.5",
