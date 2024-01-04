@@ -4,19 +4,19 @@ import { useWindowSize } from '@vueuse/core'
 import { store } from './store'
 
 import AppFooter from '@/components/base/AppFooter.vue'
-import AppHeader from '@/components/base/AppHeader.vue'
 import AppLoader from '@/components/base/AppLoader.vue'
+import AppHeader from '@/components/base/AppHeader.vue'
 
 useHead({
   titleTemplate: '%s %separator %siteName',
   templateParams: { separator: '|', siteName: 'Vue Vite App' },
   meta: [
-    { name: 'author', content: 'https://github.com/Marco-S117' },
+    { name: 'author', content: 'https://github.com/marco-s117' },
     { name: 'description', content: '@CHANGE_ME' },
     // { name: 'keywords', content: '@CHANGE_ME' },
     { name: 'rating', content: 'general' },
     { name: 'robots', content: 'index, follow' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
     // { name: 'og:description', content: '@CHANGE_ME' },
     // { name: 'og:image', content: '@CHANGE_ME' },
     // { name: 'og:locale', content: '@CHANGE_ME' },
@@ -29,7 +29,7 @@ useHead({
     // { name: 'twitter:title', content: 'Vue Vite App' },
     // { name: 'twitter:type', content: '@CHANGE_ME' },
     // { name: 'twitter:card', content: '@CHANGE_ME' }
-  ]
+  ],
 }, { mode: 'client' })
 
 const { height: wHeight } = useWindowSize()
