@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 import { useHead } from '@unhead/vue'
-import { useWindowSize } from '@vueuse/core'
+import { onMounted } from 'vue'
 import { store } from './store'
 
 import AppFooter from '@/components/base/AppFooter.vue'
 import AppLoader from '@/components/base/AppLoader.vue'
 import AppHeader from '@/components/base/AppHeader.vue'
+
+onMounted(() => {
+  store.loader.visible = false
+})
 
 useHead({
   titleTemplate: '%s %separator %siteName',
@@ -31,16 +35,10 @@ useHead({
     // { name: 'twitter:card', content: '@CHANGE_ME' }
   ],
 }, { mode: 'client' })
-
-const { height: wHeight } = useWindowSize()
-
-setTimeout(() => {
-  store.loader.visible = false
-}, 1000)
 </script>
 
 <template>
-  <div :style="{ minHeight: `${wHeight}px` }" class="font-mono flex flex-col justify-between">
+  <div class="app-container">
     <AppHeader />
     <main class="p-4 tablet:p-6 laptop:p-8 desktop:p-10 desktopXl:p-12">
       <RouterView v-slot="{ Component, route }">
@@ -56,10 +54,17 @@ setTimeout(() => {
 
 <style lang="scss">
 html {
-  @apply bg-black text-white text-base;
+  @apply bg-gray-600 text-gray-100 text-base;
 
   ::selection {
     @apply bg-yellow-400 text-primary;
   }
+}
+
+.app-container {
+  @apply font-mono flex flex-col justify-between;
+
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 </style>
