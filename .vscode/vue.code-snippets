@@ -6,7 +6,7 @@
 			"</script>",
 			"",
 			"<template>",
-			"<div class='${1:$TM_FILENAME_BASE}'></div>"
+			"<div class='${TM_FILENAME_BASE/(^[A-Z])|(?<=[a-z0-9])([A-Z])/${1:/downcase}${2:+-}${2:/downcase}/g}'>${1:<!-- your code here -->}</div>"
 			"</template>",
 			"",
 			"<style lang='scss' scoped>",
@@ -30,13 +30,13 @@
 			"// ogImage: '@CHANGE_ME',",
 			"// twitterDescription: '@CHANGE_ME',",
 			"// twitterImage: '@CHANGE_ME',",
-			"twitterTitle: 'My ${1:$TM_FILENAME_BASE page}'",
+			"// twitterTitle: 'My ${1:$TM_FILENAME_BASE page}'",
 			"// twitterCard: '@CHANGE_ME'",
 			"})",
 			"</script>",
 			"",
 			"<template>",
-			"<div><h1>${1:$TM_FILENAME_BASE}</h1></div>"
+			"<div class='${TM_FILENAME_BASE/(^[A-Z])|(?<=[a-z0-9])([A-Z])/${1:/downcase}${2:+-}${2:/downcase}/g}'>${2:<!-- your code here -->}</div>"
 			"</template>",
 			"",
 			"<style lang='scss' scoped>",
